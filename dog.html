@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>game</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+
+                 
+
+             $(document).ready(function(){
+    
+                 $("input").click(function(){
+                    $("#mama")[0].play();
+                    $('#mama').prop("volume", 0.3);
+                 });
+                
+               
+                $("button").click(function(){
+                location.reload(true);
+                });
+
+                $(".lettera").click(function(){
+                    
+                    $("#dog")[0].play();
+                    $(".letterb").hide();
+                    $(".letterc").hide();
+                    $(".lettera").animate({width: '500px',fontSize:'2rem'});
+                    $("#rightanswer")[0].play();
+                   
+                });
+                
+                
+                $(".letterb").click(function(){
+                    $("#wronganswer")[0].play();
+                });
+                $(".letterc").click(function(){
+                    $("#wronganswer")[0].play();
+                });
+                $(".letterd").click(function(){
+                    $(this).prependTo("#answer");
+                });
+                $(".lettere").click(function(){
+                    $(this).prependTo("#answer");
+                });
+                $(".letterf").click(function(){
+                    $(this).prependTo("#answer");
+                });
+                $(".letterg").click(function(){
+                    $(this).prependTo("#answer");
+                });
+                $(".letterh").click(function(){
+                    $(this).prependTo("#answer");
+                });
+                $(".letteri").click(function(){
+                    $(this).prependTo("#answer");
+                });
+                $(".letterj").click(function(){
+                    $(this).prependTo("#answer");
+                });
+
+                    
+             });
+             
+             
+             
+            </script>
+    </head>
+    <body dir="rtl">
+        <div id="poster"><img src="puppy.png" alt=""></div>
+
+        <div id="answer">
+                <div class="lettera">كلب</div>
+                <div class="letterb">قط</div>
+                <div class="letterc">حصان</div>
+        </div>
+        
+        <div id="lettercontainer">
+           
+            
+        </div>
+        <div><button><=</button></div>
+        <audio id="rightanswer" src="YEHEY.mp3" preload="auto"></audio>
+        <audio id="dog" src="dog.mp3" preload="auto"></audio>
+        <audio id="wronganswer" src="wrong.mp3" preload="auto"></audio>
+        <audio id="mama" src="mama.mp3" preload="auto"></audio>
+        <div><input type="button" value="استمع لي" id="lestenme"></div>
+
+    </body>
+</html>
